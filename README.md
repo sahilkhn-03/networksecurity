@@ -3,17 +3,13 @@
 An end-to-end machine learning project to detect phishing websites using URL and security-related website features.  
 It follows a production-style pipeline covering ingestion, validation, transformation, model training, experiment tracking, and API prediction.
 
-## 🚀 Features
+## 🚀 Key Features
 
-- Automated data ingestion from MongoDB
-- Data validation and drift detection
-- Feature engineering and preprocessing
-- Hyperparameter tuning
-- Multi-model training and evaluation
-- MLflow experiment tracking
-- DagsHub integration
-- FastAPI-based prediction API
-- Batch prediction from CSV files
+- End-to-end machine learning pipeline for phishing website detection
+- Automated data ingestion, validation, and transformation workflow
+- Data drift detection and model artifact management
+- FastAPI-based batch prediction using CSV uploads
+- MLflow and DagsHub integration for experiment tracking and model management
 
 ## 📊 Workflow
 
