@@ -14,6 +14,7 @@ from networksecurity.logging.logger import logging
 from networksecurity.pipeline.training_pipeline import TrainingPipeline
 
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import HTMLResponse
 from fastapi import FastAPI, File, UploadFile,Request
 from uvicorn import run as app_run
 from fastapi.responses import Response
@@ -78,8 +79,7 @@ async def predict_route(request: Request,file: UploadFile = File(...)):
         df.to_csv('prediction_output/output.csv')
         table_html = df.to_html(classes='table table-striped')
         #print(table_html)
-        return templates.TemplateResponse("table.html", {"request": request, "table": table_html})
-        
+        return HTMLResponse(content=table_html)
     except Exception as e:
             raise NetworkSecurityException(e,sys)
 
