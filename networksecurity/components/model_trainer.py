@@ -26,8 +26,9 @@ from sklearn.ensemble import (
 import mlflow
 from urllib.parse import urlparse
 
-# import dagshub
-# #dagshub.init(repo_owner='', repo_name='networksecurity', mlflow=True)
+import dagshub
+dagshub.init(repo_owner='sahilkhn-03', repo_name='networksecurity', mlflow=True)
+
 
 # os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com//networksecurity.mlflow"
 # os.environ["MLFLOW_TRACKING_USERNAME"]="krishnaik06"

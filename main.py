@@ -8,6 +8,7 @@ from networksecurity.entity.config_entity import TrainingPipelineConfig
 from networksecurity.components.model_trainer import ModelTrainer
 
 from networksecurity.entity.config_entity import ModelTrainerConfig
+from networksecurity.pipeline.training_pipeline import TrainingPipeline
 
 import sys
 
@@ -38,6 +39,11 @@ if __name__=='__main__':
         model_trainer_artifact=model_trainer.initiate_model_trainer()
 
         logging.info("Model Training artifact created")
+
+        training_pipeline = TrainingPipeline()
+        training_pipeline.sync_artifact_dir_to_s3()
+        training_pipeline.sync_saved_model_dir_to_s3()
+        logging.info("Synced artifacts and saved model to S3")
 
     
     except Exception as e:

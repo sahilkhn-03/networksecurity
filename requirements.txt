@@ -7,4 +7,8 @@ scikit-learn
 pymongo[srv]==3.12
 pyaml
 mlflow
+dagshub
+fastapi
+uvicorn
+python-multipart
 ## -e .
