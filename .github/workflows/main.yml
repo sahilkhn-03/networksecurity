@@ -7,7 +7,7 @@ on:
     - 'Readme.md'
 jobs:
   integration:
-    name: continuous integration
+    name: continuous Integration
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
