@@ -3,8 +3,8 @@ on:
   push:
     branches:
       - main
-  paths-ignore:
-    - 'Readme.md'
+    paths-ignore:
+      - 'Readme.md'
 jobs:
   integration:
     name: continuous Integration
